@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make: MyString
+  model: MyString
+  topspeed: 1
+  bhp: 1
+  year: 1
+  cc: 1
+
+two:
+  make: MyString
+  model: MyString
+  topspeed: 1
+  bhp: 1
+  year: 1
+  cc: 1

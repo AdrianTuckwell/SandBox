@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Car.delete_all
+
+Car.create({make: 'Subaru', model: 'WRX', topspeed: 140, bhp: 220, year: 2003, cc: 2000})
+Car.create({make: 'Abarth', model: '500', topspeed: 130, bhp: 140, year: 2012, cc: 1400})
+Car.create({make: 'Audi', model: 'S2', topspeed: 130, bhp: 230, year: 1991, cc: 2300})
+Car.create({make: 'Audi', model: 'TT', topspeed: 134, bhp: 225, year: 2000, cc: 1800})
+Car.create({make: 'Audi', model: '80 Sport', topspeed: 110, bhp: 112, year: 1985, cc: 1800})
+Car.create({make: 'Tiger', model: 'Avon', topspeed: 130, bhp: 140, year: 2008, cc: 1600})
+Car.create({make: 'Nissan', model: 'Pathfinder', topspeed: 100, bhp: 167, year: 2008, cc: 2500})

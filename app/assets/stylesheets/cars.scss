@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 60px;
   color: #89D9E1;
   margin: 0;
   line-height: 1;
@@ -37,11 +37,6 @@ a:visited {
   color: #42006a;
 }
 
-#logo {
-  float: right;
-  margin: 12px 50px; 
-}
-
 #top_container {
   margin: 20px 0 50px 50px;
 }
@@ -49,10 +44,6 @@ a:visited {
 #info_container {
   margin: 20px 0 50px 50px;
   font-size: 22px;
-}
-
-#website_list_container {
-  margin: 30px 0 20px 50px;
 }
 
 #content a {
@@ -64,12 +55,54 @@ a:visited {
   margin: 30px 0 20px 50px;
 }
 
-
 #car-img {
   float: right;
   margin: 12px 50px; 
 }
 
 
+/*-------------------------------------------------------------------*/
+.grid{
+  background-color: #717F9A
+}
+/*-------------------------------------------------------------------*/
+.grid-row{
+  display: flex;
+  flex-direction: column;
+}
+/*-------------------------------------------------------------------*/
+.cell{
+  flex: 1;
+  padding: 1px;
+}
+
+.cell a{
+  color: White;
+  text-align: right;
+}
+
+/* tell the container's children to float left: */
+.float-my-children > * {
+    float:right;
+    margin-right:5px;
+}
+
+/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
+
+.clearfix {
+    *zoom:1 /* for IE */
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+/*.clearfix:after {
+    clear: both;
+}*/
+
+/* end clearfix*/
 
 

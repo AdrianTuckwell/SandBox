@@ -1,6 +1,50 @@
-<h1>hello </h1>
-<%= @cars.each do |car| %>
-  <tr>
-    <td><%= car.make %></td>
-  </tr>
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cars</title>
+  <link rel="stylesheet" type="text/css" href="cars.scss">
+</head>
+
+<header>
+    <!-- Navigation bar -->
+    <nav>
+      <a href="welcome.html">Home</a>
+      <a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      <a href="https://github.com/AdrianTuckwell">GitHub</a>
+    </nav>
+</header>
+
+<body id="home">
+
+  <div id="top_container">
+    <h1>My potted car history </h1> 
+  </div>
+
+  <div id="info_container">
+  
+  </div>
+
+  <div id="car_list_container">
+
+    <div class="clearfix float-my-children">
+
+      <% @cars.each do |car| %>
+        <tr>
+        <a className='car-img'><img id="car-img" src=<%= car.image %> height="200" width="300"</a>
+        <a>
+          Make : <%= car.make %><br>
+          Model : <%= car.model %><br>
+          TopSpeed : <%= car.topspeed %><br>
+          Bhp : <%= car.bhp %><br>
+          cc : <%= car.cc %><br>
+          year : <%= car.year %><br>
+          <br>
+        </a>
+
+        </tr>
+      <% end %>
+    </div>
+
+  </div>
+
+</body>

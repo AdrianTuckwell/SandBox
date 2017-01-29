@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Clock</title>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css">
+	<link rel="stylesheet" type="text/css" href="clock.scss">
+</head>
+
+<header>
+    <!-- Navigation bar -->
+    <nav>
+      <a href="welcome.html">Home</a>
+      <a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      <a href="https://github.com/AdrianTuckwell">GitHub</a>
+    </nav>
+</header>
+
+	<div id="top_container">
+    	<center><h1>How long till I retire... </h1></center>
+  	</div>
+
+
+<body id="home">
+
+
+	<div id="center-div">
+  		<div class="clock">
+   		<tr>
+
+  			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  			<script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+
+  			<script type="text/javascript">
+    			var date = new Date("December 17 2037"); //Create your date object
+    			var now = new Date(); //Get todays date
+    			var diff = (date.getTime()/1000) - (now.getTime()/1000); //Calculate differenece
+    			var clock = $('.clock').FlipClock(diff, {
+      			clockFace: 'DailyCounter',
+      			countdown: true,
+    			});
+  			</script>
+  		</div>
+ 	</div>
+</body>

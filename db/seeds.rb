@@ -18,7 +18,7 @@ Car.create({make: 'Audi', model: '80 2.3E', topspeed: 120, bhp: 138, year: 1992,
 Car.create({make: 'Audi', model: 'Coupe 16V', topspeed: 120, bhp: 140, year: 1993, cc: 2000, image: 'assets/audicoupe16v.png'})
 Car.create({make: 'Audi', model: 'S2', topspeed: 130, bhp: 230, year: 1991, cc: 2300, image: 'assets/audis2.png'})
 Car.create({make: 'Audi', model: 'TT', topspeed: 134, bhp: 225, year: 2000, cc: 1800, image: 'assets/auditt.png'})
-Car.create({make: 'Subaru', model: 'WRX', topspeed: 140, bhp: 220, year: 2003, cc: 2000, image: 'assets/subaruwrx.png'})
+Car.create({make: 'Jaguar', model: 'Xtype Sport', topspeed: 140, bhp: 230, year: 2001, cc: 3000, image: 'assets/jaguarxtype.png'})
 Car.create({make: 'Tiger', model: 'Avon', topspeed: 130, bhp: 140, year: 2008, cc: 1600, image: 'assets/tigeravon.png'})
 Car.create({make: 'Nissan', model: 'Pathfinder', topspeed: 100, bhp: 167, year: 2008, cc: 2500, image: 'assets/nissanpathfinder.png'})
 Car.create({make: 'Abarth', model: '500', topspeed: 130, bhp: 140, year: 2012, cc: 1400, image: 'assets/abarth500.png'})

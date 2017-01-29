@@ -26,12 +26,13 @@
 
   <div id="car_list_container">
   
-    <div class="clearfix float-my-children">
-
       <% @cars.each do |car| %>
+  
+        <div id="each_car">
         <tr>
-        <a className='car-img'><img id="car-img" src=<%= car.image %> height="200" width="300"</a>
-        <a>
+        <!-- height="200" width="300" -->
+        <img id="car-img" src=<%= car.image %> </a>
+      
           Make : <%= car.make %><br>
           Model : <%= car.model %><br>
           TopSpeed : <%= car.topspeed %><br>
@@ -42,8 +43,9 @@
         </a>
 
         </tr>
+        </div>
       <% end %>
-    </div>
+    
 
   </div>
 

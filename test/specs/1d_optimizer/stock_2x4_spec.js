@@ -13,4 +13,11 @@ describe('stock_2x4', function(){
   function(){
     assert.equal(2.4, stock_2x4.length);
   });
+
+ // Item should have length
+ it('should check total', 
+  function(){
+    assert.equal(5, stock_2x4.length);
+  });
+
 });

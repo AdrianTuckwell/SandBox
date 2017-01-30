@@ -29,12 +29,13 @@ h1 {
 }
 
 a {
-  color: #8b00e0;
-  font-weight: bold;
+  color: grey;
+  font-weight: normal;
+  font-family: "Courier New";
 }
 
 a:visited {
-  color: #42006a;
+  color: blue;
 }
 
 #logo {
@@ -53,21 +54,13 @@ a:visited {
 
 #website_list_container {
   margin: 30px 0 20px 50px;
+  font-size: 22px;
+  font-family: "Courier New";
 }
 
 #content a {
   text-decoration: none;
   color: #1770C7;
-}
-
-#car_list_container {
-  margin: 30px 0 20px 50px;
-}
-
-
-#car-img {
-  float: right;
-  margin: 12px 50px; 
 }
 
 

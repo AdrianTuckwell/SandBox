@@ -16,7 +16,7 @@
 </header>
 
 	<div id="top_container">
-    	<center><h1>How long till I retire... </h1></center>
+    	<center><h1>I have been alive for... </h1></center>
   	</div>
 
 
@@ -31,9 +31,9 @@
   			<script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
 
   			<script type="text/javascript">
-    			var date = new Date("December 17 2037"); //Create your date object
+    			var date = new Date("December 17 1970"); //Create your date object
     			var now = new Date(); //Get todays date
-    			var diff = (date.getTime()/1000) - (now.getTime()/1000); //Calculate differenece
+    			var diff = (now.getTime()/1000) - (date.getTime()/1000); //Calculate differenece
     			var clock = $('.clock').FlipClock(diff, {
       			clockFace: 'DailyCounter',
       			countdown: true,

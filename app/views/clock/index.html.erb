@@ -33,12 +33,13 @@
   			<script type="text/javascript">
     			var date = new Date("December 17 1970"); //Create your date object
     			var now = new Date(); //Get todays date
-    			var diff = (now.getTime()/1000) - (date.getTime()/1000); //Calculate differenece
+    			var diff =  (now.getTime()/1000) - (date.getTime()/1000); //Calculate differenece
     			var clock = $('.clock').FlipClock(diff, {
       			clockFace: 'DailyCounter',
-      			countdown: true,
+      			countdown: false,
     			});
   			</script>
   		</div>
+  		<a>if you dont see a clock straight away hit refresh, the API is sometimes slow...</a>
  	</div>
 </body>

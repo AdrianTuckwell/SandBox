@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas Startpoint</title>
+    <link rel='stylesheet' type='text/css' href='sun.scss'>
+  </head>
+
+	<header>
+    <!-- Navigation bar -->
+    	<nav>
+      		<a href="welcome.html">Home</a>
+      		<a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      		<a href="https://github.com/AdrianTuckwell">GitHub</a>
+    	</nav>
+	</header>
+
+  <body>
+    <canvas id="myCanvas" width="1420" height="760" style="border:2px solid #000000;">
+    </canvas>
+		<%= timepiece('London', type: '12', lead: '0') %>
+    <script>
+		
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+
+	drawScene();
+
+	function drawScene() {
+		switch (new Date().getHours()) {
+    	case 0:
+        	sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 600;
+        	moonYpos = 100;
+        	skyColour = "Black";
+        	mountainColour = "#556B2F";
+        	break;
+    	case 1:
+			sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 500;
+        	moonYpos = 125;
+        	skyColour = "Black";
+        	mountainColour = "#556B2F";
+        	break;
+        case 2:
+			sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 400;
+        	moonYpos = 150;
+        	skyColour = "Black";
+        	mountainColour = "#556B2F";
+        	break;
+        case 3:
+			sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 300;
+        	moonYpos = 175;
+        	skyColour = "Black";
+        	mountainColour = "#556B2F";
+        	break;
+		case 4:
+			sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 250;
+        	moonYpos = 200;
+        	skyColour = "Black";
+        	mountainColour = "#556B2F";
+        	break;
+        case 5:
+			sunXpos = 1150;
+        	sunYpos = 300;
+        	moonXpos = 200;
+        	moonYpos = 225;
+        	skyColour = "Orange";
+        	mountainColour = "#006400";
+        	break;
+		case 6:
+			sunXpos = 1100;
+        	sunYpos = 225;
+        	moonXpos = 150;
+        	moonYpos = 275;
+        	skyColour = "Orange";
+        	mountainColour = "#006400";
+        	break;
+		case 7:
+			sunXpos = 1050;
+        	sunYpos = 200;
+        	moonXpos = 100;
+        	moonYpos = 300;
+        	skyColour = "#00FFFF";
+        	mountainColour = "#20B2AA";
+        	break;
+		case 8:
+			sunXpos = 1000;
+        	sunYpos = 175;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#00FFFF";
+        	mountainColour = "#20B2AA";
+        	break;
+        case 9:
+			sunXpos = 900;
+        	sunYpos = 175;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#00FFFF";
+        	mountainColour = "#20B2AA";
+        	break;
+		case 10:
+			sunXpos = 800;
+        	sunYpos = 150;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#00FFFF";
+        	mountainColour = "Green";
+        	break;
+		case 11:
+			sunXpos = 700;
+        	sunYpos = 125;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#6495ED";
+        	mountainColour = "Green";
+        	break;
+		case 12:
+			sunXpos = 600;
+        	sunYpos = 100;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#6495ED";
+        	mountainColour = "Green";
+        	break;
+		case 13:
+			sunXpos = 500;
+        	sunYpos = 125;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#6495ED";
+        	mountainColour = "Green";
+        	break;
+		case 14:
+			sunXpos = 400;
+        	sunYpos = 150;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#1E90FF";
+        	mountainColour = "#20B2AA";
+        	break;
+		case 15:
+			sunXpos = 350;
+        	sunYpos = 175;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#1E90FF";
+        	mountainColour = "#20B2AA";
+        	break;
+		case 16:
+			sunXpos = 300;
+        	sunYpos = 200;
+        	moonXpos = 600;
+        	moonYpos = 500;
+        	skyColour = "#1E90FF";
+        	mountainColour = "#20B2AA";
+        	break;
+		case 17:
+			sunXpos = 250;
+        	sunYpos = 225;
+        	moonXpos = 1150;
+        	moonYpos = 300;
+        	skyColour = "#FF8C00";
+        	mountainColour = "#20B2AA";
+        	break;
+        case 18:
+			sunXpos = 150;
+        	sunYpos = 250;
+        	moonXpos = 1100;
+        	moonYpos = 225;
+        	skyColour = "#FF8C00";
+        	mountainColour = "#5F9EA0";
+        	break;
+		case 19:
+			sunXpos = 100;
+        	sunYpos = 275;
+        	moonXpos = 1050;
+        	moonYpos = 200;
+        	skyColour = "Orange";
+        	mountainColour = "#5F9EA0";
+        	break;
+		case 20:
+			sunXpos = 100;
+        	sunYpos = 325;
+        	moonXpos = 1000;
+        	moonYpos = 175;
+        	skyColour = "Red";
+        	mountainColour = "#5F9EA0";
+        	break;
+        case 21:
+			sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 900;
+        	moonYpos = 150;
+        	skyColour = "Black";
+        	mountainColour = "#5F9EA0";
+        	break;
+		case 22:
+			sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 800;
+        	moonYpos = 125;
+        	skyColour = "Black";
+        	mountainColour = "#5F9EA0";
+        	break;
+		case 23:
+			sunXpos = 600;
+        	sunYpos = 500;
+        	moonXpos = 700;
+        	moonYpos = 100;
+        	skyColour = "Black";
+        	mountainColour = "#5F9EA0";
+        	break;
+		}
+
+  		drawSky(skyColour);
+  		drawSun('yellow',sunXpos,sunYpos);
+  		drawMoon('white',moonXpos,moonYpos);
+  		drawMountain(mountainColour);
+  		drawWords();
+	}
+
+		
+	// Draw the sky -----------------------------------
+	function drawSky(colour){
+		context.beginPath();
+		context.fillStyle = colour;
+		context.lineTo(0,500);
+		context.lineTo(1420,500);
+		context.lineTo(1420,0);
+		context.lineTo(0,0);
+		context.fill();
+		context.stroke();
+	}
+
+	// Draw the Sun-----------------------------------------
+	function drawSun(colour,xpos,ypos){
+		context.beginPath();
+		context.fillStyle = colour;
+  		context.arc(xpos,ypos,50,0,Math.PI*2,true); // Outer circle
+  		context.fill();
+  		context.stroke();
+  	}
+
+  	// Draw the moon----------------------------------------
+	function drawMoon(colour,xpos,ypos){
+		context.beginPath();
+		context.fillStyle = colour;
+  		context.arc(xpos,ypos,50,0,Math.PI*2,true); // Outer circle
+  		context.fill();
+  		context.stroke();
+  	}
+
+  	// Draw the mountain -----------------------------------
+  	function drawMountain(colour){
+  		context.beginPath();
+  		context.fillStyle = colour;
+		context.moveTo(0,500);
+  		context.lineTo(200,480);
+		context.lineTo(400,400);
+		context.lineTo(600,200);
+		context.lineTo(800,300);
+		context.lineTo(1000,250);
+		context.lineTo(1200,400);
+		context.lineTo(1420,480);
+		context.lineTo(1420,790);
+		context.lineTo(0,790);
+		context.lineTo(0,500);
+		context.fill();
+  		context.stroke();
+  	}
+
+  	function drawWords(){
+  		context.font = "30px Comic Sans MS";
+  		context.fillStyle = "black";
+		context.fillText("Hello Bennachie...",10,670);
+		context.fillText("The Sun and Moon will rise and set depending on the time of day",10,720);
+  	}
+
+	</script>
+
+
+  </body>
+</html>

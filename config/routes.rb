@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  
-
   # get 'welcome' => 'pages#home'
 
   get 'welcome' => 'pages#home'
@@ -11,20 +9,27 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
 
   
-  # Week 1 -----------------------------------------------------------------------
+  # Week 0 -----------------------------------------------------------------------
   resources :cars do 
         
     end
 
   get '/mycars' => 'pages#mycars'
 
-  # Week 2 -----------------------------------------------------------------------
-
+  # Week 1 -----------------------------------------------------------------------
   resources :clock do 
         
     end
 
   get '/clock' => 'pages#clock'
+
+
+  # Week 2 -----------------------------------------------------------------------
+  resources :sun do 
+        
+    end
+
+  get '/sun' => 'pages#sun'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

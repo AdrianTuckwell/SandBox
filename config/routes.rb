@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'ski/new'
+
   # get 'welcome' => 'pages#home'
 
   get 'welcome' => 'pages#home'
@@ -30,6 +32,14 @@ Rails.application.routes.draw do
     end
 
   get '/sun' => 'pages#sun'
+
+
+# Week 3 -----------------------------------------------------------------------
+  resources :ski do 
+        
+    end
+
+  get '/ski' => 'pages#ski'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

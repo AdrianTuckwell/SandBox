@@ -1,0 +1,43 @@
+// Place all the styles related to the ski controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#container {
+  width: 1400px;
+  height: 600px;
+  position: relative;
+  background: white;
+}
+#skier {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: white;
+}
+
+#tree1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: white;
+  top: 120px;
+  left: 50px;
+}
+
+#tree2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: white;
+  top: 150px;
+  right: 1px;
+}
+
+#tree3 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: white;
+  bottom: 250px;
+  right: 350px;
+}

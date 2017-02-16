@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skier</title>
+    <link rel='stylesheet' type='text/css' href='ski.scss'>
+  </head>
+
+<header>
+    <!-- Navigation bar -->
+    	<nav>
+      		<a href="welcome.html">Home</a>
+      		<a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      		<a href="https://github.com/AdrianTuckwell">GitHub</a>
+    	</nav>
+</header>
+<body>
+	<h1>Go Ski</h1>
+	<p><button onclick="myMove()">Release Skier</button></p> 
+
+	<div id ="container"> 
+		<div id ="skier">
+			<a className='skier'> <img id="skier" src='assets/skier-stick-figure.png'></a>
+		</div>
+		<canvas id="myCanvas" width="1400" height="600"></canvas>
+		<div id ="tree1"><img id="tree1" src='assets/trees.jpg'></div>
+		<div id ="tree2"><img id="tree2" src='assets/trees.jpg'></div>
+		<div id ="tree3"><img id="tree3" src='assets/trees.jpg'></div>
+	</div>
+
+		<script>
+
+			var canvas = document.getElementById("myCanvas");
+			var context = canvas.getContext("2d");
+
+			drawSlope();
+
+			function myMove() {
+  			var skier = document.getElementById("skier");   
+  			var pos = 0;
+  			var id = setInterval(frame, 5);
+  			function frame() {
+    			if (pos == 550) {
+      				clearInterval(id);
+    				} else {
+      					pos++; 
+      					skier.style.top = pos + 'px'; 
+      					skier.style.left = pos * 2.4 + 'px'; 
+    				}
+  				}
+			}
+
+			function drawSlope(){
+				context.moveTo(0,0);
+				context.lineTo(50,100);
+				context.lineTo(150,120);
+				context.lineTo(180,180);
+				context.lineTo(280,200);
+				context.lineTo(360,250);
+				context.lineTo(460,300);
+				context.lineTo(560,340);
+				context.lineTo(700,350);
+				context.lineTo(850,500);
+				context.lineTo(950,550);
+				context.lineTo(1150,560);
+				context.lineTo(1350,580);
+				context.stroke();
+			}
+
+		</script>
+</body>
+</html>

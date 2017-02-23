@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ball</title>
+    <link rel='stylesheet' type='text/css' href='ball.scss'>
+  </head>
+
+<header>
+    <!-- Navigation bar -->
+    	<nav>
+      		<a href="welcome.html">Home</a>
+      		<a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      		<a href="https://github.com/AdrianTuckwell">GitHub</a>
+    	</nav>
+</header>
+
+<body>
+<h1>Bouncy ball...</h1>
+<p>
+	<button onclick="drawBall()">Start Ball</button>
+	<button onclick="stopBall()">Stop Ball</button>
+</p>
+  <div id ="container"> 
+  	<canvas id="myCanvas" width="1420" height="640" style="border:2px solid #89D9E1;" ></canvas>
+  	</div>
+</body>
+
+<script>
+var context;
+var x=100;
+var y=200;
+var dx=5;
+var dy=5;
+var timer;
+
+  function drawBall(){
+  context= myCanvas.getContext('2d');
+  timer = setInterval(draw,10);
+}
+
+function stopBall() {
+    clearInterval(timer);
+    // context.clearRect(0,0, 1420,640);
+}
+
+function draw()
+{
+  context.clearRect(0,0, 1420,640);
+  context.beginPath();
+  context.fillStyle="#89D9E1";
+  context.arc(x,y,40,0,Math.PI*2,true);
+  context.closePath();
+  context.fill();
+	if( x<15 || x>1400) dx=-dx; 
+	if( y<15 || y>625) dy=-dy; 
+	x+=dx; 
+	y+=dy;
+}
+
+</script>
+</html>

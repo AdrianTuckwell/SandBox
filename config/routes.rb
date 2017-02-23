@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'ski/new'
-
   # get 'welcome' => 'pages#home'
 
   get 'welcome' => 'pages#home'
@@ -40,6 +38,15 @@ Rails.application.routes.draw do
     end
 
   get '/ski' => 'pages#ski'
+
+# Week 4 -----------------------------------------------------------------------
+  resources :ball do 
+        
+    end
+
+  get '/ball' => 'pages#ball'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,39 @@
+// Place all the styles related to the converter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p {
+  color: #2E5077;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+h2 {
+  color: #611C35;
+}
+
+input {
+  font-size: 30px;
+  padding: 12px 20px;
+  border: 4px #4da1a9;
+  border-radius: 10px;
+  width: 50%;
+  color: #8b00e0;
+  font-weight: bold;
+  box-sizing: border-box;
+  background-color: #4DA1A9;
+  color: white;
+  padding-left: 40px;
+}
+
+
+#temperature, #pressure, #speed , #length {
+  padding: 1px 20px;
+  width: 600px;
+  height: 250px;
+  position: relative;
+  background: #D7E8BA;
+  float:left;
+  margin-right: 5px;
+  margin-top: 5px;
+}

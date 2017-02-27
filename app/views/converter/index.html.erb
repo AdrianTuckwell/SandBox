@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Converter</title>
+    <link rel='stylesheet' type='text/css' href='converter.scss'>
+  </head>
+<header>
+    <!-- Navigation bar -->
+    	<nav>
+      		<a href="welcome.html">Home</a>
+      		<a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      		<a href="https://github.com/AdrianTuckwell">GitHub</a>
+    	</nav>
+</header>
+<body>
+
+<h1>Converter</h1>
+
+<div id="temperature">
+<h2>Temperature:</h2>
+<p><input type="number" id="c" onkeyup="temperature('C')"> degrees Celsius</p>
+<p><input type="number" id="f" onkeyup="temperature('F')"> degrees Fahrenheit</p> 
+</div>
+
+
+<div id="pressure">
+<h2>Pressure:</h2>
+<p><input type="number" id="p" onkeyup="pressure('P')"> psi</p>
+<p><input type="number" id="b" onkeyup="pressure('B')"> bar</p> 
+</div>
+
+<div id="speed">
+<h2>Speed:</h2>
+<p><input type="number" id="k" onkeyup="speed('K')"> kilometers per hour</p>
+<p><input type="number" id="m" onkeyup="speed('M')"> miles per hour</p> 
+</div>
+
+<div id="length">
+<h2>Length:</h2>
+<p><input type="number" id="cm" onkeyup="length('CM')"> centimeter</p>
+<p><input type="number" id="in" onkeyup="length('IN')"> inch</p> 
+</div>
+
+
+<script>
+function temperature(degree) {
+    var x;
+    if (degree == "C") {
+        x = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = Math.round(x);
+    } else {
+        x = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = Math.round(x);
+    }
+}
+
+function pressure(psi) {
+    var x;
+    if (psi == "P") {
+        x = document.getElementById("p").value * 0.0689475729;
+        document.getElementById("b").value = Math.round(x);
+    } else {
+        x = document.getElementById("b").value * 14.5037738007;
+        document.getElementById("p").value = Math.round(x);
+    }
+}
+
+function speed(km) {
+    var x;
+    if (km == "K") {
+        x = document.getElementById("k").value * 0.621371;
+        document.getElementById("m").value = Math.round(x);
+    } else {
+        x = document.getElementById("m").value * 1.60934;
+        document.getElementById("k").value = Math.round(x);
+    }
+}
+
+function length(cm) {
+    var x;
+    if (cm == "CM") {
+        x = document.getElementById("cm").value * 0.3937007874;
+        document.getElementById("in").value = Math.round(x);
+    } else {
+        x = document.getElementById("in").value * 2.54;
+        document.getElementById("cm").value = Math.round(x);
+    }
+}
+
+
+</script>
+
+</body>
+</html>

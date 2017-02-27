@@ -46,8 +46,12 @@ Rails.application.routes.draw do
 
   get '/ball' => 'pages#ball'
 
+# Week 5 -----------------------------------------------------------------------
+  resources :converter do 
+        
+    end
 
-
+  get '/converter' => 'pages#converter'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

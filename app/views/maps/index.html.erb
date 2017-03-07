@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maps</title>
+    <link rel='stylesheet' type='text/css' href='maps.scss'>
+  </head>
+<header>
+    <!-- Navigation bar -->
+    	<nav>
+      		<a href="welcome.html">Home</a>
+      		<a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      		<a href="https://github.com/AdrianTuckwell">GitHub</a>
+    	</nav>
+</header>
+<body>
+    <body onload="udnystation()">
+    <h1>Maps</h1>
+    <div id="container">
+    <div id="buttons">
+      <p>
+        <button onclick="udnystation()">Udny Station</button>
+        <button onclick="inverness()">Inverness</button>
+        <button onclick="edinburgh()">Edinburgh</button>
+      </p>
+    </div>
+
+    <div id="map"></div>
+    </div>
+    <script>
+      function edinburgh() {
+        var edinburgh = {lat: 55.9533, lng: -3.1883};
+        var infoString = "Edinburgh: Lat: " + edinburgh.lat + " Lng: " + edinburgh.lng;
+        console.log(infoString);
+        initMap(edinburgh,infoString);
+      };
+
+      function udnystation(){
+        var udnystation = {lat: 57.3105, lng: -2.1538};
+        var infoString = "Udny Station: Lat: " + udnystation.lat + " Lng: " + udnystation.lng;
+        console.log(infoString)
+        initMap(udnystation,infoString);
+      };
+
+      function inverness(){
+        var inverness = {lat: 57.4778, lng: -4.2247}
+        var infoString = "Inverness: Lat: " + inverness.lat + " Lng: " + inverness.lng;
+        console.log(infoString)
+        initMap(inverness,infoString);
+      };
+
+
+      function initMap(latlng,infoString) {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: latlng
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+          content: infoString
+        });
+
+        var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpDEQrZzct48hPKS09pqpm6j7TKR0ijnE&callback=initMap">
+    </script>
+  </body>
+</html>

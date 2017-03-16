@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'maps/index'
-
   # get 'welcome' => 'pages#home'
 
   get 'welcome' => 'pages#home'
@@ -55,12 +53,20 @@ Rails.application.routes.draw do
 
   get '/converter' => 'pages#converter'
 
-# Week 5 -----------------------------------------------------------------------
+# Week 6 -----------------------------------------------------------------------
   resources :maps do 
         
     end
 
   get '/,maps' => 'pages#maps'
+
+# Week 7 -----------------------------------------------------------------------
+  resources :born do 
+        
+    end
+
+  get '/,born' => 'pages#born'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

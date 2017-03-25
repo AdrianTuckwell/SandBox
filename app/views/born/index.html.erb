@@ -14,19 +14,43 @@
 </header>
 <body>
 
-<h1>Born</h1>
-<h3><i>What day of the week were you born?</i></h3>
-<p>Enter your birthday and press &quot;Update&quot; button</p>
-
+<h1>I was born on a thursday...</h1>
+<div id="headertext">
+	<p><i>What day of the week were you born?</i></p>
+	<p>Enter your birthday and press &quot;Update&quot; button</p>
+</div>
 <form>
-  <p>Month (1-12): <input TYPE="text" NAME="month" SIZE="2"> </p>
-  <p>Day of Month (1-31): <input TYPE="text" NAME="day" SIZE="2"> </p>
-  <p>Year (eg. 1960): <input TYPE="text" NAME="year" SIZE="4"> </p>
-  <p><input TYPE="button" VALUE="Update" ONCLICK="compute(this.form)"> </p>
+  	<div id="getdata">
+  		<p>
+  			<label>Month (1-12):</label> 
+  			<input TYPE="text" NAME="month" SIZE="2"> 
+  		</p>
+		<p>
+			<label>Day of Month (1-31): </label>
+			<input TYPE="text" NAME="day" SIZE="2"> 
+		</p>
+  		<p>
+  			<label>Year (eg. 1960): </label>
+  			<input TYPE="text" NAME="year" SIZE="4"> 
+  		</p>
+  	</div>
+
+  	<div id="buttons">
+  		<input TYPE="button" VALUE="Update" ONCLICK="compute(this.form)">
+  		<input TYPE="reset" VALUE="Clear">
+  	</div>
+
+  	<div id="outputdata">
+  		<p>
+  			<label>Date of Birth: </label>
+  			<input TYPE="text" NAME="result1" SIZE="18"> 
+  		</p>
   
-  <p><input TYPE="reset" VALUE="Clear"> </p>
-  <p>Date of Birth: <input TYPE="text" NAME="result1" SIZE="18"> </p>
-  <p>Day of Week: <input TYPE="text" NAME="result2" SIZE="18"> </p>
+  		<p>
+  			<label>You were born on a : </label>
+  			<input TYPE="text" NAME="result2" SIZE="18"> 
+  		</p>
+  	</div>
 </form>
 
 </body>

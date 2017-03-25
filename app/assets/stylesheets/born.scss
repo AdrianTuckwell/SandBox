@@ -1,3 +1,74 @@
 // Place all the styles related to the born controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+form p label {
+	display:block;
+	float:left;
+	width:300px;
+}
+
+input {
+  font-size: 30px;
+  padding: 12px 20px;
+  border: 4px #4da1a9;
+  border-radius: 10px;
+  width: 50%;
+  color: #8b00e0;
+  font-weight: bold;
+  box-sizing: border-box;
+  background-color: #4DA1A9;
+  color: white;
+  padding-left: 10px;
+}
+
+input[type=button], input[type=reset] {
+	margin-top: 25px;
+	font-size: 30px;
+  	padding: 12px 20px;
+  	border: 4px #4da1a9;
+  	border-radius: 10px;
+  	width: 100%;
+  	color: #8b00e0;
+  	font-weight: bold;
+  	box-sizing: border-box;
+  	background-color: #4DA1A9;
+  	color: white;
+  	padding-left: 10px;
+}
+
+
+#getdata {
+  padding: 1px 20px;
+  width: 600px;
+  height: 280px;
+  position: relative;
+  background: #D7E8BA;
+  float:left;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+#buttons {
+  padding: 1px 20px;
+  width: 280px;
+  height: 280px;
+  position: relative;
+  background: #D7E8BA;
+  float:left;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+
+#outputdata{
+  padding: 1px 20px;
+  width: 600px;
+  height: 190px;
+  position: relative;
+  background: #D7E8BA;
+  float:left;
+  margin-right: 5px;
+  margin-top: 5px;
+}

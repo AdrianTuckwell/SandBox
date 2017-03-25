@@ -1,0 +1,77 @@
+// Place all the styles related to the eyes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  /*background-image: url("http://www.examiner.com/images/blog/wysiwyg/image/paristink.jpg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-color: #E9FFFB;*/
+}
+
+#pupilleft,
+#pupilright,
+#dogpupilleft,
+#dogpupilright {
+  position: relative;
+  background: #000000;
+  border-radius: 50%;
+}
+
+#eyeleft,
+#eyeright,
+#dogeyeleft,
+#dogeyeright {
+  position: absolute;
+  background: #FFFF11;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#pupilleft {
+  width: 18px;
+  height: 18px;
+}
+
+#eyeleft {
+  width: 35px;
+  height: 35px;
+  left: 213px;
+  top: 272px;
+}
+
+#pupilright{  
+  width: 18px;
+  height: 18px;
+}
+
+#eyeright {
+  width: 35px;
+  height: 35px;
+  left: 268px;
+  top: 275px;
+}
+
+#dogpupilleft {
+  width: 14px;
+  height: 14px;
+}
+
+#dogeyeleft
+{
+  width: 25px;
+  height: 25px;  
+  left: 175px; 
+  top: 461px;
+}
+
+#dogpupilright{
+  width: 14px;
+  height: 14px;
+}
+
+#dogeyeright {
+  width: 25px;
+  height: 25px;
+  left: 210px;
+  top: 459px;
+}

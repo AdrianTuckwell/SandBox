@@ -1,13 +1,11 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Gravity</title>
-    <link rel='stylesheet' type='text/css' href='gravity.scss'>
+    <link rel='stylesheet' type='text/css' href='gravity.scss'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-
 </head>
-	<header>
+<header>
     <!-- Navigation bar -->
     	<nav>
       		<a href="welcome.html">Home</a>
@@ -16,14 +14,18 @@
     	</nav>
 </header>
 
+
+<body>
 <h1>Gravity</h1>
-<body onload="startGame()">
+<p><button onclick="startGame()">New Game</button></p> 
+<p><button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button></p>
 
 
 <script>
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
@@ -34,11 +36,12 @@ function startGame() {
 
 var myGameArea = {
     canvas : document.createElement("canvas"),
+    
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 700;
+        this.canvas.height = 500;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.body.insertBefore(this.canvas,null);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         },
@@ -138,7 +141,5 @@ function accelerate(n) {
     myGamePiece.gravity = n;
 }
 </script>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
 </body>
-
 </html>

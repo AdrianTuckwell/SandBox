@@ -88,7 +88,12 @@ Rails.application.routes.draw do
 
   get '/,lottery' => 'pages#lottery'
 
+# Week 11 -----------------------------------------------------------------------
+  resources :snake do 
+        
+    end
 
+  get '/,snake' => 'pages#snake'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

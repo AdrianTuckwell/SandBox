@@ -95,6 +95,15 @@ Rails.application.routes.draw do
 
   get '/,snake' => 'pages#snake'
 
+# Week 12 -----------------------------------------------------------------------
+  resources :circuits do 
+        
+    end
+
+  get '/,circuits' => 'pages#circuits'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

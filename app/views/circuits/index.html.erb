@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Circuits</title>
+	<link rel="stylesheet" type="text/css" href="circuits.scss">
+</head>
+
+<header>
+    <!-- Navigation bar -->
+    <nav>
+      <a href="welcome.html">Home</a>
+      <a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      <a href="https://github.com/AdrianTuckwell">GitHub</a>
+    </nav>
+</header>
+
+
+<body>
+<div>
+	<h1>Circuits</h1>
+	<a>if you dont get circuits straight away hit refresh...</a>
+<div>
+</body>
+
+<style type="text/css">
+	html, body {
+ 	 margin: 0;
+	}
+	canvas {
+  	display: block;
+	}
+</style>
+
+<script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
+
+<script>
+"use strict";
+
+var lines = undefined;
+
+function setup() {
+  lines = [];
+  for (var i = 0; i < 800; i++) {if (window.CP.shouldStopExecution(1)){break;}
+    addLine();
+  }
+window.CP.exitedLoop(1);
+
+  createCanvas(windowWidth, windowHeight);
+  cursor(CROSS);
+}
+
+function draw() {
+  background("white");
+  drawLines();
+}
+
+function addLine() {
+  var line = [];
+  var x = random(windowWidth);
+  var y = random(windowHeight);
+  var p = createVector(x, y);
+  var angle = floor(random(8)) * PI / 4;
+  var parts = random(2, 6);
+  line.push(p);
+  for (var i = 1; i < parts; i++) {if (window.CP.shouldStopExecution(3)){break;}
+    var tries = 80;
+    // Ugly hack
+    var doBreak = false;
+    do {if (window.CP.shouldStopExecution(2)){break;}
+      var d = random(30, 500);
+      var xDiff = cos(angle) * d;
+      var yDiff = sin(angle) * d;
+      var angleDiff = random([-PI / 4, PI / 4]);
+
+      var p2 = line[i - 1];
+      if (intersectsAnother(x + xDiff, y + yDiff, p2.x, p2.y)) {
+        doBreak = true;
+      } else {
+        doBreak = false;
+        x += xDiff;
+        y += yDiff;
+        angle += angleDiff;
+        line.push(createVector(x, y));
+        break;
+      }
+    } while (--tries);
+window.CP.exitedLoop(2);
+
+    console.log(tries);
+    if (doBreak && tries === 0) {
+      break;
+    }
+  }
+window.CP.exitedLoop(3);
+
+  if (line.length > 1) {
+    lines.push(line);
+  }
+}
+
+function intersectsAnother(x3, y3, x4, y4) {
+  for (var j = 0; j < lines.length; j++) {if (window.CP.shouldStopExecution(5)){break;}
+    var points = lines[j];
+    for (var i = 0; i < points.length - 1; i++) {if (window.CP.shouldStopExecution(4)){break;}
+      var p1 = points[i];
+      var x1 = p1.x;
+      var y1 = p1.y;
+      var p2 = points[i + 1];
+      var x2 = p2.x;
+      var y2 = p2.y;
+      if (intersects(x1, y1, x2, y2, x3, y3, x4, y4)) {
+        return true;
+      }
+    }
+window.CP.exitedLoop(4);
+
+  }
+window.CP.exitedLoop(5);
+;
+  return false;
+}
+
+function drawLines() {
+  var center = createVector(mouseX, mouseY);
+  var color = "black";
+  lines.forEach(function (points) {
+    var firstPoint = points[0];
+    fill(color);
+    var f = warpIt(center, firstPoint);
+    ellipse(f.x, f.y, 4);
+    noFill();
+    beginShape();
+    points.forEach(function (point) {
+      var p = warpIt(center, point);
+      vertex(p.x, p.y);
+    });
+    endShape();
+    var lastPoint = points[points.length - 1];
+    fill(color);
+    var l = warpIt(center, lastPoint);
+    ellipse(l.x, l.y, 4);
+  });
+}
+
+function warpIt(center, point) {
+  var p = point.copy();
+  var diff = p5.Vector.sub(center, p);
+  var m = diff.mag();
+  if (m < 100) {
+    diff.setMag(m * m / 100);
+    p.add(diff);
+  }
+  return p;
+}
+
+function intersects(x1, y1, x2, y2, x3, y3, x4, y4) {
+  var denom = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
+  if (denom === 0) {
+    return false;
+  }
+  var ua = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / denom;
+  var ub = ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) / denom;
+  if (ua >= 0 && ua <= 1 && ub >= 0 && ub <= 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+</script>
+
+
+</html>

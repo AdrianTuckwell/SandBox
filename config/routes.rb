@@ -102,7 +102,12 @@ Rails.application.routes.draw do
 
   get '/,circuits' => 'pages#circuits'
 
+# Week 13 -----------------------------------------------------------------------
+  resources :shapes do 
+        
+    end
 
+  get '/,shapes' => 'pages#shapes'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

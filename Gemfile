@@ -55,3 +55,9 @@ end
 
 gem 'timepiece'
 
+group :assets do
+     gem 'compass-rails'
+     gem 'compass'
+     # Add any compass extensions here
+   end
+

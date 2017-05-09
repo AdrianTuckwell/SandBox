@@ -109,6 +109,14 @@ Rails.application.routes.draw do
 
   get '/,shapes' => 'pages#shapes'
 
+# Week 14 -----------------------------------------------------------------------
+  resources :switches do 
+        
+    end
+
+  get '/,switches' => 'pages#switches'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

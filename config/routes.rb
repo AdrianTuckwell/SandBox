@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  
 
   # get 'welcome' => 'pages#home'
 
@@ -124,6 +123,13 @@ Rails.application.routes.draw do
     end
 
   get '/,rude_kid' => 'pages#rude_kid'
+
+  # Week 16 -----------------------------------------------------------------------
+  resources :space_invader do 
+        
+    end
+
+  get '/,space_invader' => 'pages#space_invader'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

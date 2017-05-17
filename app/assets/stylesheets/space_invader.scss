@@ -1,0 +1,43 @@
+// Place all the styles related to the spaceInvader controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@function draw($matrix) {
+  $length: length($matrix);
+  $canvas: '';
+  
+  @for $i from 1 through $length {
+    $row: nth($matrix, $i);
+    
+    @for $j from 1 through length($row) {
+      $pixel: nth($row, $j);
+      
+      @if ($pixel == 'x') {
+        $canvas: $canvas + ($j*10px) + ' ' + ($i*10px) + ' 0 ' + #000;
+      }
+      
+      @if not(($j == length($row) and $i == $length) or $pixel == 'o') {
+        $canvas: $canvas + ',';
+      }
+    }
+  }
+  
+  $canvas: $canvas + '0 0 0 transparent';
+  
+  @return unquote($canvas);
+}
+
+$matrix: (o o x o o o o o x o o)
+         (x o o x o o o x o o x)
+         (x o x x x x x x x o x)
+         (x x x o x x x o x x x)
+         (x x x x x x x x x x x)
+         (o x x x x x x x x x o)
+         (o o x o o o o o x o o)
+         (o x o o o o o o o x o);
+
+.space-invader {
+  width: 10px;
+  height: 10px;
+  box-shadow: draw($matrix);
+}

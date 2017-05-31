@@ -130,12 +130,19 @@ Rails.application.routes.draw do
 
   get '/,space_invader' => 'pages#space_invader'
 
-  # Week 16 -----------------------------------------------------------------------
+  # Week 17 -----------------------------------------------------------------------
   resources :las_vegas do 
         
     end
 
   get '/,las_vegas' => 'pages#las_vegas'
+
+# Week 18 -----------------------------------------------------------------------
+  resources :fidget_spinner do 
+        
+    end
+
+  get '/,fidget_spinner' => 'pages#fidget_spinner'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

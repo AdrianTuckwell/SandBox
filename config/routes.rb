@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  # get 'welcome' => 'pages#home'
-
   get 'welcome' => 'pages#home'
   
   get '/help' => 'pages#help'
@@ -143,6 +141,13 @@ Rails.application.routes.draw do
     end
 
   get '/,fidget_spinner' => 'pages#fidget_spinner'
+
+  # Week 19 -----------------------------------------------------------------------
+  resources :millions do 
+        
+    end
+
+  get '/,millions' => 'pages#millions'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

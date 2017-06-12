@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Millions</title>
+    <link rel='stylesheet' type='text/css' href='millions.scss'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<header>
+    <!-- Navigation bar -->
+    	<nav>
+      		<a href="welcome.html">Home</a>
+      		<a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      		<a href="https://github.com/AdrianTuckwell">GitHub</a>
+    	</nav>
+</header>
+
+
+<body>
+<h1>Millions</h1>
+<p><button onclick="play()">Are you feeling lucky?</button></p>
+
+<script>
+
+function play() {
+	var randomNumber = Math.floor(Math.random() * 6 ) + 1;
+	var guess = prompt('I am thinking of a random number between 1 and 6. What is it?');
+
+	if (parseInt(guess) === randomNumber ) {
+  		document.write('<p>You guessed the number!</p>');
+  	} else {
+		document.write('<p>Sorry. The number was ' + randomNumber + '</p>');
+	}
+}
+</script>
+
+</body>
+</html>

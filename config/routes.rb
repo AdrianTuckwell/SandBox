@@ -149,6 +149,14 @@ Rails.application.routes.draw do
 
   get '/,millions' => 'pages#millions'
 
+  # Week 20 -----------------------------------------------------------------------
+  resources :random do 
+        
+    end
+
+  get '/,random' => 'pages#random'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

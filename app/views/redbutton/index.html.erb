@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Red Button</title>
+	<link rel="stylesheet" type="text/css" href="redbutton.scss">
+</head>
+
+<header>
+    <!-- Navigation bar -->
+    <nav>
+      <a href="welcome.html">Home</a>
+      <a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      <a href="https://github.com/AdrianTuckwell">GitHub</a>
+    </nav>
+</header>
+
+
+<body>
+<h1>Red Button</h1>
+
+<div class="penguin"></div>
+<div class="bigredbutton"></div>
+<div class="biggreenbutton"></div>
+<div class="bigbluebutton"></div>
+<div class="bigredbutton_clone2_round1"></div>
+<div class="bigredbutton_clone3_round1"></div>
+<div class="bigredbutton_text">DO NOT PRESS</div>
+<!-- 8 rows, 4 columns -->
+
+
+<style>
+/* Sorry for not using a web safe font. */
+
+.bigredbutton {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background: #ff0000;
+  cursor: pointer;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &:active {
+    background: (#ff0000, 10);
+  }
+}
+
+.bigbluebutton {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background: #4900b5;
+  cursor: pointer;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &:active {
+    background: darken(#4900b5, 10);
+  }
+}
+
+.biggreenbutton {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background: #37c700;
+  cursor: pointer;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &:active {
+    background: darken(#37c700, 10);
+  }
+}
+
+.biggreenbutton, .bigbluebutton {
+  display: none;
+}
+
+.bigredbutton_clone2_round1, .bigredbutton_clone3_round1 {
+  display: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background: #ff0000;
+  cursor: pointer;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &:active {
+    background: #d30303;
+  }
+}
+
+// 280px
+
+.bigredbutton_text {
+  width: 540px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  margin: auto;
+  top: 220px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  user-select: none;
+  cursor: default;
+  font: 22px 'Arial Black', Helvetica, sans-serif;
+}
+
+.penguin {
+  background: url('https://dl.dropboxusercontent.com/s/fu0idkdh3mm3mxb/penguin_button.png');
+  width: 148px;
+  height: 116px;  
+  position: absolute;
+  margin: auto;
+  top: 36px;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  z-index: 99999;
+  display: none;
+  cursor: pointer;
+}
+
+.upsidedown {
+  transform: rotate(180deg);
+}
+
+.cssanimation {
+  animation: cssanimation 4s linear infinite;
+}
+
+@keyframes cssanimation {
+  0% {left: -280px}
+  50% {left: 280px}
+  100% {left: -280px}
+}
+</style>
+
+<script>
+var text = ['*Ahem*<br />DO NOT PRESS', '...you pressed it again.<br />Okay punk, press it again.', 'Yeah, that\'s it.<br />Come on, one more time.', 'Again.', 'Do it.', 'Okay, now you\'ve had your fill.<br />Stop clicking.', 'You see, this is why we can\'t be friends.', 'You\'re just too selfish.', 'Grr... now you\'ve asked for it.<br />Do NoT pReSs ThE bUtToN!', 'You seem to be immune to<br />my mind control.', 'Time for Plan B.<br />Press it. You know you want to.', 'Mwahahaha! Now lets see you press it! LOSER!', '...this displeases me.', 'HA! I have replaced the button<br />with this penguin. Now what are you<br />going to do?', '...I hate you.', 'In that "cut off your head with a<br />toothbrush" kind of way.', 'Quick! What\'s that behind you?!', 'Which one is it?<br />Not so smart now, are ya?', 'You\'re a clever one.<br />Time for Round 2.', 'You\'re a clever one.<br />Time for Round 2.<br/> (I will finish this later)', 'HAHAHAHAHAHA!<br/>(I will finish this later)', '...', 'Okay Okay. You can press the button.<br />I don\'t care.', 'No really, I don\'t care anymore.', 'In fact, I lost interest a while ago.', 'I\'m doing this just to entertain you.', 'Really.', 'Do you like cartoons?', '...and paint?', 'Cartoons and Paint?', 'Well you should.', 'Pick a colour.', 'Green. Perfect.', 'Press the red button', 'Press the green button', 'Press the blue button', 'See, you just can\'t trust me.<br />Or can you?', 'You know, I\'m glad we get<br />to spend so much time together.', 'Doesn\'t it make you want to stop<br />clicking big red buttons?', 'No seriously.', 'Look deep inside you.', 'Deeper.', 'DEEPER!', 'What if I told you that that the next<br />time you press the button, the world<br />will explode?', 'See. You could have been dead right there.', 'And there.', 'You know, eventually<br />I\'ll stop letting you get away with this.', 'The world is going to explode<br />and all you care about is pressing buttons', 'Okay, this time the world will<br />explode. I guarantee.', 'BOOM!<br />You\'re dead.', 'That wasn\'t very smart now was it?', 'Everyone\'s dead. Even you.', 'I\'m not. I\'m just text.', 'But you\'re dead.', 'Ha! Dead-face!', 'Stop clicking.', 'Have I ever told you how much I hate you?', 'Well I do.', 'I\'m gonna start talking upside down<br />if you click one more time.', 'HA! Can\'t read me now, can you?', 'What? You didn\'t want to read me anyway?', 'Well then, I\'ll show you!', '', '', 'You really are stubborn.', 'Stop clicking. Please.', 'See look. You\'ve reduced me<br />to begging. So please stop.', 'PLEASE!!!!', 'I\'ll give you a nickle', 'Dime?', 'Quarter?', 'Aww come on! Just stop!', 'That does it! Time to<br />unleash my master plan!', 'BEHOLD!<br />The awesome power of CSS3 animation!', 'H8!', 'Let\'s get funky! (Is there an easy way to do this?)', 'I\'ll be you\'re starting to wonder<br />why you\'ve been doing this<br />for so long.', 'Like jeez, all you\'ve been doing is<br />clicking a red button.', 'How lame is that?', 'But there is a bonus to all this', 'But it\'s a secret.<br />So I can\'t tell you.', 'I got you going didn\'t I?', 'You should\'ve seen the look<br />on your face! HA!', 'But seriously, there is a secret.<br />There\'s been one the whole time.', 'You\'ve been busy clicking away at<br />this big red button...', '...when all the while a little white<br />button has watched your every move', 'MWAHAHAHAHAHA!', 'HAHAHA!', 'BWAHAA!', 'MWAAAAH!!', 'HAHA!', 'hehe!', 'lol', 'rofl', 'roflmao', 'roflmaoqxz', 'and so on and so forth', '...', '*whistles*', 'Find it yet?', 'Look harder!<br />It\'s right under your nose.', 'I know where it is.<br />But I\'ll never tell.', 'Or maybe I will...', 'But you gotta stop clicking the<br />Big Red Button first!', 'Stop.', 'Now.', 'Fine, I won\'t tell you<br />the secret.', 'Go ahead. Try to find it yourself.<br />You\'ll never find it.', 'Well you might... but the odds<br />are against you.', '~', 'What\'s your favorite letter?', 'Mine is the squiggly!', '~', 'Find it yet?', 'No?', 'Then stop clicking and I\'ll tell you.', 'You know what?', 'POOF! It\'s gone!', 'Has anyone ever slapped you?', 'Cuz I will.', 'Really I will.', 'It won\'t hurt though.', 'Cuz you\'re dead.', 'D-E-D', 'Remember? You went and blew up<br />the entire planet!', 'Thought I\'d forget about that didn\'t you?', 'But an elephant never forgets!', '...or something along those lines.', 'You killed everyone.', 'Sikko.', 'What would your mother say?', 'That\'s right... feel bad.', 'The world is null and you\'re to blame.', 'I\'d recommend suicide,<br />but you\'re dead already.', 'So there\'s only one thing left<br />that you can do...', 'Stop clicking the button.', 'Dude, you\'re dead.<br />What are you gaining from this?', 'Okay, everytime you click, you<br />get sent to a lower layer of hell.', 'Welcome to layer 2', '3', '4', '5', '6', '7', '8', '9', 'BOOM!<br />You\'ve exploded Hell.', 'I hope you\'re happy.', 'Heavens gone too. That\'s how smooth you are.', 'No you\'re dead, and there\'s no heaven or hell.', 'How does it feel?<br />You\'ve condemned the world to limbo.', 'I once shot a man for being in limbo.', '...or was he doing the limbo?', 'Meh, Tomato Tomahto', 'This is getting boring isn\'t it?', 'But you can\'t stop!', 'You want to end this.<br />You want to leave your computer.', 'But you can\'t!', 'You need to see if there\'s a pot of gold<br />at the end of the rainbow!', 'But I\'ve already told you how to<br />find the pot of gold', 'Follow the white rabbit.', '...erm, button.', 'Remember the hidden button?', 'Or are you so seld-centered you<br />forgot about that too?', 'I could just keep you here all day<br />if I wanted.', 'You\'re in my world now.', 'No matter how much you<br />hate it, you have to press the button.', 'again...', 'and again...', 'and again.', 'You just keep hoping something<br />good will come of this.', 'Sure I could tell you if I wanted<br />to, but I\'m not gonna.', 'You decided to keep clicking.<br />So I\'m gonna enjoy it.', 'I mean, there\'s nothing else to enjoy', 'You blew it all up remember?', 'You\'re probably wondering who I am', 'Well let me tell you a tale about myself', 'One day, I was walking home from<br />work and I saw a small little house.', 'I knocked on the door out of curiousity<br />to see if anyone was home.', 'The door opened.', 'But no one was there.', 'I went inside to check it out<br />and found nothing...', '...nothing but a little metal box.', 'So I opened it.', 'Inside the box was a layer of<br />foam protecting it\'s contents', 'I removed the foam and there it was...', '...', '... ...', 'ZZZzzzzzz', 'zzzzZZZZzzzz', 'ZZZZzzzZZZZ', 'Huh?', 'Oh! Right! The story!', 'So there I was, holding this<br />little metal box in my hands.', 'The top was open and sitting<br />inside was this...', 'Big Red Button.', 'And do you know what it said?', 'Oh I\'ll tell you what it said.<br />It said...']
+var text_num = -1;
+$('.bigredbutton').on('click', function() {
+  text_num += 1;
+  $('.bigredbutton_text').html(text[text_num]);  
+  $('.text_num').text(text_num)
+  if (text_num == 11) {
+    $('.bigredbutton').css('width', '10px');
+    $('.bigredbutton').css('height', '10px');
+    $('.bigredbutton').css('border-radius', '10px');
+  } else {
+    $('.bigredbutton').css('width', '120px');
+    $('.bigredbutton').css('height', '120px');
+    $('.bigredbutton').css('border-radius', '120px');
+  }
+
+  if (text_num == 13) {
+    $('.penguin').css('display', 'block');
+  } else {    
+    $('.penguin').css('display', 'none');
+  }
+
+  if (text_num == 17) {
+    $('.bigredbutton').css('left', '280px');
+    $('.bigredbutton').css('display', 'block');
+    $('.bigredbutton_clone2_round1').css('display', 'block');
+    $('.bigredbutton_clone3_round1').css('display', 'block');
+    $('.bigredbutton_clone2_round1').css('left', '0');
+    $('.bigredbutton_clone3_round1').css('left', '-280px');
+  } else {
+    $('.bigredbutton_clone2_round1').css('display', 'none');
+    $('.bigredbutton_clone3_round1').css('display', 'none');    
+    $('.bigredbutton').css('left', '0');
+  }
+
+  if (text_num == 33) {
+    $('.biggreenbutton').css('display', 'block');
+    $('.biggreenbutton').css('left', '280px');
+    $('.bigbluebutton').css('display', 'block');
+    $('.bigbluebutton').css('left', '-280px');
+  } else {
+    $('.biggreenbutton').css('display', 'none');
+    $('.bigbluebutton').css('display', 'none');
+    $('.bigredbutton').css('display', 'block');
+  } 
+
+  if (text_num == 34) {
+    $('.biggreenbutton').css('display', 'block');
+    $('.bigbluebutton').css('display', 'block');
+    $('.bigredbutton').css('display', 'block');
+    $('.bigredbutton').css('background', '#37c700')
+    $('.biggreenbutton').css('background', '#ff0000')
+    $('.bigredbutton').css('left', '280px');
+    $('.biggreenbutton').css('left', '0');
+  } else if (text_num > 17) {
+    $('.bigredbutton').css('background', '#ff0000');
+    $('.biggreenbutton').css('background', '#37c700');
+    $('.bigredbutton').css('left', '0');
+    $('.biggreenbutton').css('left', '280px');
+    $('.bigbluebutton').css('left', '-280px');
+  }
+
+  if (text_num == 35) {
+    $('.biggreenbutton').css('display', 'block');
+    $('.bigbluebutton').css('display', 'block');
+    $('.bigredbutton').css('display', 'block');
+    $('.bigredbutton').css('background', '#37c700')
+    $('.biggreenbutton').css('background', '#ff0000')
+    $('.bigredbutton').css('left', '280px');
+    $('.biggreenbutton').css('left', '0');
+  } else if (text_num > 34) {
+    $('.biggreenbutton').css('display', 'none');
+    $('.bigbluebutton').css('display', 'none');
+    $('.bigredbutton').css('display', 'block');
+    $('.bigredbutton').css('background', '#ff0000')
+  } 
+
+  if (text_num >= 59 && text_num <= 63) {
+    $('.bigredbutton_text').addClass('upsidedown');
+  } else {   
+    $('.bigredbutton_text').removeClass('upsidedown');
+  }
+
+  if (text_num == 73) {
+    $('.bigredbutton').addClass('cssanimation');
+  } else {
+    $('.bigredbutton').removeClass('cssanimation');    
+  }
+
+  if (text_num == 117) {
+    $('.bigredbutton').css('top', '208px');
+    $('.bigredbutton').css('left', '104px');
+    $('.bigredbutton').css('width', '13px');
+    $('.bigredbutton').css('height', '11px');
+    $('.bigredbutton').css('z-index', '9999');
+  } else if (text_num > 11 && text_num > 17 && text_num > 35) {
+    $('.bigredbutton').css('display', 'block');
+    $('.bigredbutton').css('top', '0');
+    $('.bigredbutton').css('left', '0');
+    $('.bigredbutton').css('width', '120px');
+    $('.bigredbutton').css('height', '120px');
+  }
+  
+  if (text_num > 197) {
+    text_num = -1;
+    $('.bigredbutton_text').html('DO NOT PRESS');
+  } else {
+    return false;
+  }
+})
+
+$('.penguin').on('click', function() {
+  text_num += 1;
+  $('.bigredbutton_text').html(text[text_num]);
+  $(this).css('display', 'none')
+})
+</script>
+
+</body>
+</html>

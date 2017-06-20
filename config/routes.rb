@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'welcome' => 'pages#home'
   
   get '/help' => 'pages#help'
@@ -156,6 +157,12 @@ Rails.application.routes.draw do
 
   get '/,random' => 'pages#random'
 
+# Week 21 -----------------------------------------------------------------------
+  resources :redbutton do 
+        
+    end
+
+  get '/,redbutton' => 'pages#redbutton'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

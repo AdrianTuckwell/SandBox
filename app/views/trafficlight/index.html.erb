@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Space Invader</title>
+	<link rel="stylesheet" type="text/css" href="trafficlight.scss">
+</head>
+
+<header>
+    <!-- Navigation bar -->
+    <nav>
+      <a href="welcome.html">Home</a>
+      <a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      <a href="https://github.com/AdrianTuckwell">GitHub</a>
+    </nav>
+</header>
+
+
+<body>
+<h1>Traffic Light</h1>
+<div class="content">
+      <div class="black_box">
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+      </div>
+    </div>
+</body>
+
+<style>
+@keyframes redlight {
+    from {background-color: black;}
+    to {background-color: red;}
+}
+
+@keyframes yellowlight {
+    from {background-color: black;}
+    to {background-color: yellow;}
+}
+
+@keyframes greenlight {
+    from {background-color: black;}
+    to {background-color: green;}
+}
+
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.black_box {
+  width: 60px;
+  border: 1px solid black;
+  background-color: black;
+}
+
+.red {
+  width: 0px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 50%;
+  animation-name: redlight;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.yellow {
+  width: 0px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 50%;
+  animation-name: yellowlight;
+  animation-delay: 2s;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+ }
+
+.green {
+  width: 0px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 50%;
+  animation-name: greenlight;
+  animation-delay: 4s;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+ }
+</style>
+</html>

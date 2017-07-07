@@ -171,6 +171,13 @@ Rails.application.routes.draw do
 
   get '/,trafficlight' => 'pages#trafficlight'
 
+# Week 23 -----------------------------------------------------------------------
+  resources :timeline do 
+        
+    end
+
+  get '/,timeline' => 'pages#timeline'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

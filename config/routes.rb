@@ -178,6 +178,21 @@ Rails.application.routes.draw do
 
   get '/,timeline' => 'pages#timeline'
 
+  # Week 24 -----------------------------------------------------------------------
+  resources :timesheet do 
+        
+    end
+
+  get '/,timesheet' => 'pages#timesheet'
+
+# Week 25 -----------------------------------------------------------------------
+  resources :stopwatch do 
+        
+    end
+
+  get '/,stopwatch' => 'pages#stopwatch'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

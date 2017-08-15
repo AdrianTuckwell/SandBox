@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   get 'welcome' => 'pages#home'
   
   get '/help' => 'pages#help'
@@ -198,6 +197,13 @@ Rails.application.routes.draw do
     end
 
   get '/,skyline' => 'pages#skyline'
+
+# Week 27 -----------------------------------------------------------------------
+  resources :terminal do 
+        
+    end
+
+  get '/,terminal' => 'pages#terminal'
 
 
 

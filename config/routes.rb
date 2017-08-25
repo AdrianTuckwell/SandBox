@@ -205,6 +205,12 @@ Rails.application.routes.draw do
 
   get '/,terminal' => 'pages#terminal'
 
+# Week 28 -----------------------------------------------------------------------
+  resources :calendar do 
+        
+    end
+
+  get '/,calendar' => 'pages#calendar'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

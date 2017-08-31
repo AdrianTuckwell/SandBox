@@ -213,6 +213,13 @@ Rails.application.routes.draw do
   get '/,calendar' => 'pages#calendar'
 
 
+# Week 29 -----------------------------------------------------------------------
+  resources :calculator do 
+        
+    end
+
+  get '/,calculator' => 'pages#calculator'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

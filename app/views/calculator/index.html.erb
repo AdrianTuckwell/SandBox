@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>calculator</title>
+	<link rel="stylesheet" type="text/css" href="calculator.scss">
+</head>
+
+<header>
+    <!-- Navigation bar -->
+    <nav>
+      <a href="welcome.html">Home</a>
+      <a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      <a href="https://github.com/AdrianTuckwell">GitHub</a>
+    </nav>
+</header>
+
+
+<body>
+<h1>Calculator</h1>
+<div class="calc clearfix">
+  <h3 class="text-center">Calculator</h3>
+  <div class="field text-right"></div>
+  <div class="table-wrapper">
+    <div class="table-row">
+      <div id="AC"  class="calc_button">AC</div>
+      <div id="CE"  class="calc_button">CE</div>
+      <div id="%" class="calc_button">%</div>
+      <div id="divide" class="calc_button">/</div>
+    </div>
+    <div class="table-row">
+      <div id="7" class="calc_button">7</div>
+      <div id="8"  class="calc_button">8</div>
+      <div id="9" class="calc_button">9</div>
+      <div id="multiply" class="calc_button">*</div>
+    </div>
+    <div class="table-row">
+      <div id="4" class="calc_button">4</div>
+      <div id="5" class="calc_button">5</div>
+      <div id="6" class="calc_button">6</div>
+      <div id="minus" class="calc_button">-</div>
+    </div>
+    <div class="table-row">
+      <div id="1" class="calc_button">1</div>
+      <div id="2" class="calc_button">2</div>
+      <div id="3" class="calc_button">3</div>
+      <div id="plus" class="calc_button">+</div>
+    </div>
+    <div class="table-row">
+      <div id="dot" class="calc_button">.</div>
+      <div id="0" class="calc_button">0</div>
+      <div class="calc_button">Ans</div>
+      <div id="eq" class="calc_button">=</div>
+    </div>
+  </div>
+</div>
+</body>
+
+<style>
+.calc {
+  max-width: 400px;
+  background-color: #89D9E1;
+  border-radius: 15px;
+  margin: 50px auto 0 auto;
+  padding: 10px;
+}
+.field {
+  height: 35px;
+  background-color: #89C9E1;
+  font-size: 24px;
+  overflow: hidden;
+}
+.table-wrapper {
+  display: table;
+  width: 100%;
+  margin: 15px 0;
+  border-spacing: 4px 4px;
+}
+.table-row {
+  display: table-row;
+}
+.calc_button {
+  width: 23%;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 20px;
+}
+.calc_button_push {
+  border: 1px solid blue;
+}
+</style>
+
+<script>
+var flag = false;
+$(document).ready(function(){
+  $(".calc_button").click(function(){
+    $(".calc_button").removeClass("calc_button_push");
+    $(this).addClass("calc_button_push");
+  });
+  $("#9").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("9");
+  });
+  $("#8").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("8");
+  });
+  $("#7").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("7");
+  });
+  $("#6").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("6");
+  });
+  $("#5").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("5");
+  });
+  $("#4").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("4");
+  });
+  $("#3").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("3");
+  });
+  $("#2").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("2");
+  });
+  $("#1").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+    $(".field").append("1");
+  });
+  $("#0").click(function(){
+    $(".field").append("0");
+  });
+  $("#dot").click(function(){
+    $(".field").append(".");
+    if (flag) {
+      flag = false;
+    }
+  });
+  $("#AC").click(function(){
+    $(".field").html("");
+  });
+  $("#CE").click(function(){
+    if (flag) {
+      $(".field").html("");
+      flag = false;
+    }
+   var str = $(".field").html();
+   $(".field").html( str.slice(0,str.length-1) );
+  });
+  $("#divide").click(function(){
+    $(".field").append("/");
+    if (flag) {
+      flag = false;
+    }
+  });
+  $("#multiply").click(function(){
+    $(".field").append("*");
+    if (flag) {
+      flag = false;
+    }
+  });
+  $("#minus").click(function(){
+    $(".field").append("-");
+    if (flag) {
+      flag = false;
+    }
+  });
+  $("#plus").click(function(){
+    $(".field").append("+");
+    if (flag) {
+      flag = false;
+    }
+  });
+  $("#eq").click(function(){
+    var str = $(".field").html();
+    if ( /^\-?\d+\.?\d*[\+\-\*\/](\d+\.?\d*[\+\-\*\/])*\d+\.?\d*$/g.test(str) ) {
+      $(".field").html( eval(str) );
+      flag = true;
+    }
+  });
+});
+</script>
+
+</html>

@@ -234,6 +234,15 @@ Rails.application.routes.draw do
 
   get '/,text_clock' => 'pages#text_clock'
 
+# Week 32 -----------------------------------------------------------------------
+  resources :book do 
+        
+    end
+
+  get '/,book' => 'pages#book'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

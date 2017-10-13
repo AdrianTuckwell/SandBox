@@ -241,6 +241,12 @@ Rails.application.routes.draw do
 
   get '/,book' => 'pages#book'
 
+# Week 32 -----------------------------------------------------------------------
+  resources :friday do 
+        
+    end
+
+  get '/,friday' => 'pages#friday'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

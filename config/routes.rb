@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'welcome' => 'pages#home'
   
   get '/help' => 'pages#help'
@@ -255,6 +256,12 @@ Rails.application.routes.draw do
 
   get '/,bats' => 'pages#bats'
 
+# Week 35 -----------------------------------------------------------------------
+  resources :pumpkin do 
+        
+    end
+
+  get '/,pumpkin' => 'pages#pumpkin'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

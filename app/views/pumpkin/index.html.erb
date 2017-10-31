@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pumpkin</title>
+    <link rel='stylesheet' type='text/css' href='pumpkin.scss'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<header>
+    <!-- Navigation bar -->
+    	<nav>
+      		<a href="welcome.html">Home</a>
+      		<a href="mailto:adrian.tuckwell@gmail.com">Contact</a>
+      		<a href="https://github.com/AdrianTuckwell">GitHub</a>
+    	</nav>
+</header>
+
+
+<body>
+<h1>Pumpkin</h1>
+<div class="center-outer">
+<div class="center-inner">
+<div class="pumpkin">
+<div class="top"></div>
+<div class="le"></div>
+<div class="re"></div>
+<div class="nose"></div>
+<div class="mouth"></div>
+</div>
+  <h2>Happy Halloween!</h2>
+</div>
+</div>
+
+</body>
+
+<style type="text/css">
+	html, body {
+margin: 0;
+width: 100%;
+height: 100%;
+/*background-color: #333;*/
+}
+
+.center-outer {
+display: table;
+width: 100%;
+height: 100%;
+}
+
+.center-inner {
+display: table-cell;
+vertical-align: middle;
+}
+
+.pumpkin {
+width: 300px;
+height: 200px;
+margin: 0 auto;
+background-color: #e67e22;
+border-radius: 100px;
+position: relative;
+}
+
+.pumpkin .top {
+width: 30px;
+height: 30px;
+background-color: #d2b48c;
+position: absolute;
+border-top-left-radius: 50%;
+top: -30px;
+left: 130px;
+}
+
+.pumpkin .le, .pumpkin .re {
+position: absolute;
+width: 40px;
+height: 40px;
+border-radius: 40px 40px 10px 10px;
+top: 30px;
+}
+
+.pumpkin .le {
+left: 80px;
+}
+
+.pumpkin .re {
+left: 180px;
+}
+
+.pumpkin .nose {
+position: absolute;
+width: 40px;
+height: 30px;
+border-radius: 10px 10px 40px 40px;
+top: 90px;
+left: 130px;
+}
+
+.pumpkin .mouth {
+width: 150px;
+height: 35px;
+position: absolute;
+border-radius: 0 0 20px 20px;
+top: 140px;
+left: 75px;
+}
+
+.pumpkin .mouth::before, .pumpkin .mouth::after {
+content: "";
+width: 30px;
+height: 20px;
+background-color: #e67e22;
+position: absolute;
+border-radius: 0 0 10px 10px;
+}
+
+.pumpkin .mouth::before {
+left: 40px;
+}
+
+.pumpkin .mouth::after {
+left: 80px;
+}
+
+.pumpkin .le, .pumpkin .re, .pumpkin .nose, .pumpkin .mouth {
+animation: candle 3s linear infinite;
+}
+
+h2 {
+font-family: 'Creepster', cursive;
+color: #e67e22;
+text-align: center;
+font-size: 3em;
+}
+
+@-webkit-keyframes candle {
+0% {background-color: #943B00;}
+50% {background-color: #d35400;}
+100% {background-color: #943B00;}
+}
+
+@keyframes candle {
+0% {background-color: #943B00;}
+50% {background-color: #d35400;}
+100% {background-color: #943B00;}
+}
+
+</style>
+
+
+
+
+</html>

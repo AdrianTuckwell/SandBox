@@ -263,6 +263,13 @@ Rails.application.routes.draw do
 
   get '/,pumpkin' => 'pages#pumpkin'
 
+# Week 36 -----------------------------------------------------------------------
+  resources :ruler do 
+        
+    end
+
+  get '/,ruler' => 'pages#ruler'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

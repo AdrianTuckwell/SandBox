@@ -270,6 +270,13 @@ Rails.application.routes.draw do
 
   get '/,ruler' => 'pages#ruler'
 
+  # Week 37 -----------------------------------------------------------------------
+  resources :snow do 
+        
+    end
+
+  get '/,snow' => 'pages#snow'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

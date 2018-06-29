@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'welcome' => 'pages#home'
   
   get '/help' => 'pages#help'
@@ -282,6 +283,13 @@ Rails.application.routes.draw do
     end
 
   get '/,stickman' => 'pages#stickman'
+
+# Week 38 -----------------------------------------------------------------------
+  resources :notes do 
+        
+    end
+
+  get '/,notes' => 'pages#notes'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
